@@ -1,0 +1,37 @@
+import random
+print('Vamos jogar JOKENPÔ!?!?!')
+o1 = 'PAPEL'
+o2 = 'PEDRA'
+o3 = 'TESOURA'
+comp = [o1, o2, o3]
+ecomp = random.choice(comp)
+j = str(input('Digite A para escolher PAPEL.\nDigite B para escolher PEDRA.\nDigite C para escolher TESOURA: ').upper())
+A = 'PAPEL'
+B = 'PEDRA'
+C = 'TESOURA'
+print(j)
+if j == 'A':
+    if ecomp == o1:
+        print('Ambos escolheram PAPEL. O jogo empatou!')
+    elif ecomp == o2:
+        print('O {} envolve a {}. Você venceu, PARABÉNS!!!'.format(A,ecomp))
+    else:
+        print('A {} corta o {}. Você PERDEU!!! Tente novamente.'.format(ecomp,A))
+elif j == 'B':
+    if ecomp == o2:
+        print('Ambos escolheram PEDRA. O jogo empatou!')
+    elif ecomp == o1:
+        print('O {} envolve a {}. Você PERDEU!!! Tente novamente.'.format(ecomp,B))
+    else:
+        print('A {} entorta a {}. PARABÉNS, você venceu!!!'.format(B, ecomp))
+
+elif j == 'C':
+    if ecomp == o3:
+        print('Ambos escolheram TESOURA. O jogo empatou')
+    elif ecomp == o1:
+        print('A {} corta o {}. PARABÉNS. Você venceu!!!'.format(C,ecomp))
+    else:
+        print('A {} entorta a {}. Você PERDEU, tente novamente!!!'.format(ecomp,C))
+
+else:
+    print('A opção digitada é inválida. Escolha novamente.')
