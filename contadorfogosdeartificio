@@ -1,0 +1,14 @@
+import emoji
+print('{:*^50}'.format(' Contador do Reveilon '))
+for c in range(10, -1, -1):
+  sleep(1)
+  print(c)
+print(emoji.emojize((':fireworks:')*20+' FELIZ ANO NOVO '+(':fireworks:')*20, use_aliases=True))++
+
+#Dúvidas: Na linha 6 queria centrarlizar o "FELIZ ANO NOVO" no meio de fogos de artifício assim como fiz na linha 2 com o 'Contador do Reveilon'
+# Ao executar ele roda certo, mas gera uma mensagem pedindo pra voltar a biblioteca de emoji de 1.7 para 1.6.3, como fazer isso?
+
+#Mensagem do sistema:
+C:\Users\Everton Alves\Desktop\scripts-python\Desafio046.py:7: DeprecationWarning: The parameter 'use_aliases' in emoji.emojize() is deprecated and will be removed in version 2.0.0. Use language='alias' instead.
+To hide this warning, pin/downgrade the package to 'emoji~=1.6.3'
+  print(emoji.emojize((':fireworks:')*20+' FELIZ ANO NOVO '+(':fireworks:')*20, use_aliases=True))
